@@ -18,7 +18,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #4b52db;
+  background-color: #303030;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,6 +34,18 @@ body {
   font-weight: bold;
   margin-top: 0;
   margin-bottom: 20px;
+  margin-bottom: 64px;
+  color: #3498db; /* Set initial color */
+  animation: colorAnimation 3s linear infinite alternate; /* Define animation */
+}
+
+@keyframes colorAnimation {
+  0% {
+    color: #3498db; /* Initial color */
+  }
+  100% {
+    color: #e74c3c; /* Final color */
+  }
 }
 
 /* Style the container and boxes */
@@ -44,4 +56,28 @@ body {
   align-items: center;
   max-width: 900px;
   padding: 20px;
+  position: relative;
+}
+
+.social {
+  position: absolute;
+  bottom: -128px;
+  display: flex;
+  width: 100vw;
+  min-height: 128px;
+  align-items: center;
+  justify-content: center;
+  background-color: #999;
+}
+
+.soc-icon {
+  font-size: 64px;
+  padding-left: 32px;
+  color: #111;
+  transition: transform 0.3s ease-in-out;
+}
+
+.soc-icon:hover {
+  transform: scale(1.2);
+  color: #df442f;
 }
